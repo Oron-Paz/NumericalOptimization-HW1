@@ -21,7 +21,7 @@ class TestMinimization(unittest.TestCase):
         self.param_tol = 1e-8
         self.max_iter = 100
         self.x0_standard = [1.0, 1.0]  # starting values
-        self.x0_rosenbrock = [-1.0, 2.0]  
+        self.x0_rosenbrock = [-1.0, 2.0]  # only for rosebnrock
     
     def test_quadratic_example_1(self):
         print("\n" + "="*60)
@@ -40,6 +40,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
         print(f"Final location: {gd_final_x}")
         print(f"Final objective value: {gd_final_f}")
+        print(f"Iterations: {gd_optimizer.history[-1]["iteration"]}")
         print(f"Success: {gd_success}")
         
         newton_optimizer = minimizationAlgorithms('Newton Search Directions')
@@ -54,6 +55,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nNEWTON'S METHOD FINAL RESULT:")
         print(f"Final location: {newton_final_x}")
         print(f"Final objective value: {newton_final_f}")
+        print(f"Iterations: {newton_optimizer.history[-1]["iteration"]}")
         print(f"Success: {newton_success}")
         
         # create comparison plots
@@ -93,6 +95,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
         print(f"Final location: {gd_final_x}")
         print(f"Final objective value: {gd_final_f}")
+        print(f"Iterations: {gd_optimizer.history[-1]["iteration"]}")
         print(f"Success: {gd_success}")
         
         newton_optimizer = minimizationAlgorithms('Newton Search Directions')
@@ -107,6 +110,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nNEWTON'S METHOD FINAL RESULT:")
         print(f"Final location: {newton_final_x}")
         print(f"Final objective value: {newton_final_f}")
+        print(f"Iterations: {newton_optimizer.history[-1]["iteration"]}")
         print(f"Success: {newton_success}")
         
         # create comparison plots
@@ -146,6 +150,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
         print(f"Final location: {gd_final_x}")
         print(f"Final objective value: {gd_final_f}")
+        print(f"Iterations: {gd_optimizer.history[-1]["iteration"]}")
         print(f"Success: {gd_success}")
         
         newton_optimizer = minimizationAlgorithms('Newton Search Directions')
@@ -160,6 +165,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nNEWTON'S METHOD FINAL RESULT:")
         print(f"Final location: {newton_final_x}")
         print(f"Final objective value: {newton_final_f}")
+        print(f"Iterations: {newton_optimizer.history[-1]["iteration"]}")
         print(f"Success: {newton_success}")
         
         # create comparison plots
@@ -199,6 +205,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
         print(f"Final location: {gd_final_x}")
         print(f"Final objective value: {gd_final_f}")
+        print(f"Iterations: {gd_optimizer.history[-1]["iteration"]}")
         print(f"Success: {gd_success}")
         
         newton_optimizer = minimizationAlgorithms('Newton Search Directions')
@@ -213,6 +220,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nNEWTON'S METHOD FINAL RESULT:")
         print(f"Final location: {newton_final_x}")
         print(f"Final objective value: {newton_final_f}")
+        print(f"Iterations: {newton_optimizer.history[-1]["iteration"]}")
         print(f"Success: {newton_success}")
         
         plot_contours_with_path(
@@ -250,6 +258,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
         print(f"Final location: {gd_final_x}")
         print(f"Final objective value: {gd_final_f}")
+        print(f"Iterations: {gd_optimizer.history[-1]["iteration"]}")
         print(f"Success: {gd_success}")
         
         newton_optimizer = minimizationAlgorithms('Newton Search Directions')
@@ -264,6 +273,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nNEWTON'S METHOD FINAL RESULT:")
         print(f"Final location: {newton_final_x}")
         print(f"Final objective value: {newton_final_f}")
+        print(f"Iterations: {newton_optimizer.history[-1]["iteration"]}")
         print(f"Success: {newton_success}")
         
         plot_contours_with_path(
@@ -299,6 +309,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
         print(f"Final location: {gd_final_x}")
         print(f"Final objective value: {gd_final_f}")
+        print(f"Iterations: {gd_optimizer.history[-1]["iteration"]}")
         print(f"Success: {gd_success}")
         
         newton_optimizer = minimizationAlgorithms('Newton Search Directions')
@@ -313,6 +324,7 @@ class TestMinimization(unittest.TestCase):
         print(f"\nNEWTON'S METHOD FINAL RESULT:")
         print(f"Final location: {newton_final_x}")
         print(f"Final objective value: {newton_final_f}")
+        print(f"Iterations: {newton_optimizer.history[-1]["iteration"]}")
         print(f"Success: {newton_success}")
         
         plot_contours_with_path(
