@@ -193,7 +193,7 @@ class TestMinimization(unittest.TestCase):
             self.x0_rosenbrock.copy(), 
             self.obj_tol, 
             self.param_tol, 
-            10000  
+            10000
         )
         
         print(f"\nGRADIENT DESCENT FINAL RESULT:")
@@ -236,7 +236,7 @@ class TestMinimization(unittest.TestCase):
         print("Testing Linear Function - Both Methods")
         print("="*60)
         
-        small_max_iter = 10000
+        small_max_iter = 100
         
         gd_optimizer = minimizationAlgorithms('Gradient Descent')
         gd_final_x, gd_final_f, gd_success = gd_optimizer.minimize(

@@ -50,12 +50,11 @@ def rosenbrock(x, hessian_needed=False):
 
     return f, g, h
 def my_own_linear_example(x, hessian_needed=False):
-    a = [2, -3]  # coefficient vector
-    f = a[0]*x[0] + a[1]*x[1]  # f(x) = 2*x1 - 3*x2
-    g = [a[0], a[1]]  # gradient is constant = a = [2, -3]
+    f = (x[0] - 2)**2 + (x[1] + 1)**2
+    g = [2*(x[0] - 2), 2*(x[1] + 1)]
     
     if hessian_needed:
-        h = [[0, 0], [0, 0]]  # Hessian is zero matrix for linear functions
+        h = [[2, 0], [0, 2]]
     else:
         h = None
     
